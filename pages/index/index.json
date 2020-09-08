@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "searchInput": "/components/searchInput/searchInput",
+    "recommendGood": "/components/recommendGood/recommendGood",
+    "van-image": "@vant/weapp/image/index"
+  },
+  "navigationBarTitleText": "首页"
+}

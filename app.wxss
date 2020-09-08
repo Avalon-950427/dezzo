@@ -1,0 +1,358 @@
+/**app.wxss**/
+@import '/utils/iconfont.wxss';
+
+.container {
+  height: 100vh;
+  font-family: "PingFangSC-Regular","";
+  font-size: 28rpx;
+  color: rgb(0,0,0,1);
+  box-sizing: border-box;
+} 
+
+view{
+  font-family:"PingFangSC","sy-m";
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-around{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-between{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-nowrap{
+  flex-wrap: nowrap;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.flex-align-center{
+  align-items: center;
+}
+
+.flex-s0{
+  flex-shrink: 0;
+}
+
+.flex-s1{
+  flex-shrink:1;
+}
+
+.flex-g0{
+  flex-grow: 0;
+}
+
+.flex-g1{
+  flex-grow: 1;
+}
+
+.PFSC-r{
+  font-family:"PingFangSC-Regular",'sy-r';
+  font-weight: normal;
+}
+
+.PFSC-l{
+  font-family:"PingFangSC-Light";
+  font-weight: 300;
+}
+
+.PFSC-m{
+  font-family:"PingFangSC-Medium","sy-m";
+  font-weight: 500;
+}
+
+.PFSC-600{
+  font-family:"PingFangSC-Medium","sy-m";
+  font-weight: 600;
+}
+
+.PFSC-b{
+  font-family:"PingFangSC-Medium","sy-m";
+  font-weight: bold;
+}
+
+.number-font-300{
+  font-family: "Avenir";
+  font-weight: 300;
+}
+
+.number-font-500{
+  font-family: "Avenir", "sy-m";
+  font-weight: 500;
+}
+
+.number-font-600{
+  font-family: "Avenir", "sy-m";
+  font-weight: 600;
+}
+
+.number-font-700{
+  font-family: "Avenir", "sy-m";
+  font-weight: 700;
+}
+
+.number-font-400{
+  font-family: "Avenir",'sy-r';
+  font-weight: 400;
+}
+
+.fz-16{
+  font-size: 16rpx;
+}
+
+.fz-18{
+  font-size: 18rpx;
+}
+
+.fz-20{
+  font-size: 20rpx;
+}
+
+.fz-22{
+  font-size: 22rpx;
+}
+
+.fz-24{
+  font-size: 24rpx;
+}
+
+.fz-26{
+  font-size: 26rpx;
+}
+
+.fz-30{
+  font-size: 30rpx;
+}
+
+.fz-32{
+  font-size: 32rpx;
+}
+
+.fz-34{
+  font-size: 34rpx;
+}
+
+.fz-36{
+  font-size: 36rpx;
+}
+
+.fz-40{
+  font-size: 40rpx;
+}
+
+.fz-48{
+  font-size: 48rpx;
+}
+
+.bs-4{
+  border-radius: 4rpx;
+}
+
+.bs-10{
+  border-radius: 10rpx;
+}
+
+.bs-12{
+  border-radius: 12rpx;
+}
+
+.bs-20{
+  border-radius: 20rpx;
+}
+
+.bs-30{
+  border-radius: 30rpx;
+}
+
+.bs-35{
+  border-radius: 35rpx;
+}
+
+.mt-16{
+  margin-top: 16rpx;
+}
+
+.mt-20{
+  margin-top: 20rpx;
+}
+
+.mt-24{
+  margin-top:24rpx;
+}
+
+.mt-28{
+  margin-top: 28rpx;
+}
+
+.mt-30{
+  margin-top: 30rpx;
+}
+
+.mt-40{
+  margin-top: 40rpx;
+}
+
+.mt-50{
+  margin-top: 50rpx;
+}
+
+.mt-34{
+  margin-top: 34rpx;
+}
+
+.mt-50{
+  margin-top: 50rpx;
+}
+
+.mb-8{
+  margin-bottom: 8rpx;
+}
+
+.mb-10{
+  margin-bottom: 10rpx;
+}
+
+.mb-14{
+  margin-bottom: 14rpx;
+}
+
+.mb-18{
+  margin-bottom: 18rpx;
+}
+
+.mb-24{
+  margin-bottom: 24rpx;
+}
+
+.mb-28{
+  margin-bottom: 28rpx;
+}
+
+.mb-30{
+  margin-bottom: 30rpx;
+}
+
+.mb-40{
+  margin-bottom: 40rpx;
+}
+
+.mb-50{
+  margin-bottom: 50rpx;
+}
+
+.mb-76{
+  margin-bottom: 76rpx;
+}
+
+.ml-10{
+  margin-left: 10rpx;
+}
+
+.ml-12{
+  margin-left: 12rpx;
+}
+
+.ml-18{
+  margin-left: 18rpx;
+}
+
+.ml-24{
+  margin-left: 24rpx;
+}
+
+.ml-28{
+  margin-left: 28rpx;
+}
+
+.ml-30{
+  margin-left: 30rpx;
+}
+
+.ml-60{
+  margin-left: 60rpx;
+}
+
+.mr-10{
+  margin-right: 10rpx;
+}
+
+.mr-16{
+  margin-right: 16rpx;
+}
+
+.mr-20{
+  margin-right: 20rpx;
+}
+
+.mr-34{
+  margin-right: 34rpx;
+}
+
+.mr-40{
+  margin-right: 40rpx;
+}
+
+.mr-50{
+  margin-right: 50rpx;
+}
+
+.mr-80{
+  margin-right: 80rpx;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.underline{
+  text-decoration: line-through;
+}
+
+.single-line{
+  white-space: nowrap;  
+  text-overflow:ellipsis; 
+  overflow:hidden;
+}
+
+.rela{
+  position: relative;
+}
+
+.abso{
+  position: absolute;
+}
+
+.block{
+  width: 100vw;
+  height: 100rpx;
+}
+
+.iphoneX-block{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 68rpx;
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width:0;
+  height:0;
+  color:transparent;
+}

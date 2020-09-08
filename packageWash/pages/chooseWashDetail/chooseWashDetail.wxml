@@ -1,0 +1,46 @@
+<!--packageWash/pages/chooseWashDetail/chooseWashDetail.wxml-->
+<scroll-view scroll-y style="height: 100vh">
+  <view class="container">
+    <!-- 开始拍照区域 -->
+    <view class="mt-20 flex-between flex-align-center">
+      <text class="PFSC-m fz-32">物件拍照</text>
+      <text class="PFSC-l fz-22 tip">平台根据上传图片确认物件</text>
+    </view>
+    <view class="uploader-wrap mt-34">
+      <view class="mr-34">
+        <van-uploader>
+          <view class="icon bs-12 rela">
+            <text class="tab abso PFSC-r fz-24">必填</text>
+          </view>
+        </van-uploader>
+        <view class="des PFSC-r fz-26 mt-24">整体图</view>
+      </view>
+      <view class=" mr-34">
+        <van-uploader>
+          <view class="icon bs-12"></view>
+        </van-uploader>
+        <view class="des PFSC-r fz-26 mt-24">细节图</view>
+      </view>
+    </view>
+    <!-- 结束拍照区域 -->
+    <!-- 开始选择物件品牌区域 -->
+    <view class="mt-28 flex-between flex-align-center">
+      <text class="PFSC-m fz-32">选择物件品牌</text>
+      <text class="PFSC-l fz-22 tip">请正确选择，以免影响签收物件</text>
+    </view>
+    <view class="choose-brand mt-24 PFSC-r fz-28 bs-12">
+      选择品牌
+      <text class="iconfont icon-xiala fz-20"></text>
+    </view>
+    <!-- 结束选择物件品牌区域 -->
+    <!-- 开始选择洗护项目区域 -->
+    <view class="PFSC-m mt-50 fz-32">选择洗护项目</view>
+    <view class="clean-service-wrap">
+      <view class="clean-service mr-80 mt-20 bs-30 PFSC-r fz-24" wx:for="{{cleanServices}}" wx:key="id">{{item.name}} ¥{{item.price}}</view>
+    </view>
+    <!-- 结束选择洗护项目区域 -->
+  </view>
+  <view class="block" style="height:{{isIphoneX?'68rpx':'0'}}"></view>
+</scroll-view>
+<view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>
+

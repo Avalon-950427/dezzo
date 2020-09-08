@@ -1,0 +1,41 @@
+<!--packageOrder/pages/washOrder/orderList/orderList.wxml-->
+<view class="container">
+  <!-- 开始tab栏区域 -->
+  <view class="tabs-wrap flex-between flex-align-center">
+    <view class="tab {{activeTabIndex===index?'active-tab fz-34':'PFSC-r fz-28'}}" style="width:calc(100vw / {{tabs.length}})" bindtap="chooseTab" data-index="{{index}}" wx:for="{{tabs}}" wx:key="id">{{item}}</view>
+  </view>
+  <!-- 结束tab栏区域 -->
+  <!-- 开始订单列表区域 -->
+  <scroll-view scroll-y style="height: calc(100vh - 94rpx)">
+    <view style="padding-top:20rpx">
+      <view class="order-wrap bs-12" wx:for="{{5}}" wx:key="id" bindtap="toOrderDetail" data-index="{{index}}">
+        <!-- 订单编号订单状态 -->
+        <view class="flex-between">
+          <view class="PFSC-r fz-24">订单号：2007031120</view>
+          <view class="PFSC-m fz-24">核验中/服务中</view>
+        </view>
+        <!-- 订单图片 -->
+        <view class="mt-34 flex-between flex-align-center">
+          <scroll-view scroll-x style="width: calc(100% - 40rpx);background-color: white;">
+            <!-- TODO: img-list内阴影 -->
+            <view class="img-list">
+              <van-image custom-class="mr-20" width="160rpx" height="160rpx" fit="cover" wx:for="{{5}}" wx:key="id"></van-image>
+            </view>
+          </scroll-view>
+          <text class="iconfont icon-xiala right-arrow"></text>
+        </view>
+        <!-- 底部合计区域 -->
+        <view class="flex-between flex-align-center mt-20">
+          <view>
+            <text class="PFSC-r fz-24">共2件 总计：</text><text class="number-font-700 fz-28">¥468</text>
+          </view>
+          <van-button custom-class="btn-style" color=" rgba(190, 47, 47, 1)" round="true">查看详情</van-button>
+        </view>
+      </view>
+    </view>
+    <view class="PFSC-l fz-24 mt-10 mb-24 no-more-order">暂无更多订单</view>
+    <view class="block" style="height:{{isIphoneX?'68rpx':'0'}}"></view>
+  </scroll-view>
+  <!-- 结束订单列表区域 -->
+</view>
+<view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>

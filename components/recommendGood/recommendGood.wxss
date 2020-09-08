@@ -1,0 +1,37 @@
+/* components/recommendGood/recommendGood.wxss */
+@import '/app.wxss';
+/* 开始推荐商品样式 */
+.recommend-goods-wrap{
+  width: 100vw;
+  padding: 30rpx 40rpx;
+  margin-top: 10rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.recommend-goods{
+  flex-wrap: wrap;
+}
+
+.recommend-goods-item{
+  margin-top: 24rpx;
+}
+
+.recommend-goods-name{
+  margin-top: 10rpx;
+}
+
+.recommend-goods-desc{
+  margin-top: 4rpx;
+}
+
+.recommend-goods-price{
+  color: #BE2F2F;
+}
+
+.recommend-goods-price .original-price{
+  display: inline-block;
+  margin-left: 8rpx;
+  color: #B5B5B5;
+}
+/* 结束推荐商品样式 */

@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goodClassify/goodClassify",
+    "pages/cart/cart",
+    "pages/personalCenter/personCenter"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#BE2F2F",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/images/home-tab-icon.png",
+        "selectedIconPath": "/static/images/home-tab-active-icon.png"
+      },
+      {
+        "pagePath": "pages/goodClassify/goodClassify",
+        "text": "分类",
+        "iconPath": "/static/images/classify-tab-icon.png",
+        "selectedIconPath": "/static/images/classify-tab-active-icon.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/static/images/cart-tab-icon.png",
+        "selectedIconPath": "/static/images/cart-tab-active-icon.png"
+      },
+      {
+        "pagePath": "pages/personalCenter/personCenter",
+        "text": "我的",
+        "iconPath": "/static/images/my-tab-icon.png",
+        "selectedIconPath": "/static/images/my-tab-active-icon.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "packageGoods",
+      "pages": [
+        "pages/goodList/goodList",
+        "pages/goodDetail/goodDetail",
+        "pages/settlement/settlement"
+      ]
+    },
+    {
+      "root": "packageWash",
+      "pages": [
+        "pages/chooseWashClassify/chooseWashClassify",
+        "pages/chooseWashDetail/chooseWashDetail",
+        "pages/settlement/settlement"
+      ]
+    },
+    {
+      "root": "packageOrder",
+      "pages": [
+        "pages/washOrder/orderList/orderList",
+        "pages/washOrder/orderDetail/orderDetail",
+        "pages/washOrder/applyRework/applyRework",
+        "pages/washOrder/reworkOrderDetail/reworkOrderDetail",
+        "pages/goodOrder/goodOrderDetail/goodOrderDetail"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,28 @@
+/* packageWash/pages/chooseWashClassify/chooseWashClassify.wxss */
+.title{
+  text-align: center;
+}
+
+.title text{
+  display: inline-block;
+  transform: rotate(180deg);
+  color: #BE2F2F;
+}
+
+.wash-classify-wrap{
+  padding: 0 40rpx;
+  margin-bottom: 60rpx;
+}
+
+.wash-classify{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.classify-item:not(:nth-child(4n)){
+  margin-right: 36rpx;
+}
+
+.service-name{
+  text-align: center
+}

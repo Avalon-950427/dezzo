@@ -1,0 +1,92 @@
+/* pages/goodClassify/goodClassify.wxss */
+/* 开始商品分类区域样式 */
+.goods-classify-wrap{
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 100vw;
+  height: calc(100vh - 116rpx);
+}
+
+
+/* 开始左侧大分类区域样式 */
+.big-classify{
+  width: 160rpx;
+  height: 100%;
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+.big-classify-item{
+  height: 92rpx;
+  line-height: 92rpx;
+}
+
+.active-big-classify-item{
+  position: relative;
+  background-color: white;
+}
+
+.active-big-classify-item::after{
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20rpx;
+  content: '';
+  width: 6rpx;
+  height: 30rpx;
+  margin: auto;
+  background-color: #BE2F2F;
+  border-radius: 3rpx;
+}
+/* 结束左侧大分类区域样式 */
+
+/* 开始右侧小分类样式 */
+.small-classify{
+  width: calc(100vw - 160rpx);
+  height: 100%;
+}
+
+.small-classify-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.small-classify-item{
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+.small-classify-name{
+  padding: 28rpx 30rpx;
+}
+
+/* 开始品牌区域样式 */
+
+.brand-info{
+  margin: 0 40rpx 0 30rpx;
+}
+
+.first-element{
+  color: #BE2F2F;
+}
+
+.alphabets-list{
+  position: fixed;
+  top: 20%;
+  right: 0;
+  text-align: center;
+  line-height: 30rpx;
+}
+
+.alphabets-list view{
+  padding: 0 16rpx;
+  box-sizing: border-box;
+}
+
+/* 结束品牌区域样式 */
+
+/* 结束右侧小分类样式 */
+
+
+/* 结束商品分类区域样式 */

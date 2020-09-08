@@ -1,0 +1,91 @@
+<!--packageWash/pages/settlement/settlement.wxml-->
+<view class="container">
+  <scroll-view scroll-y style="height: 100vh">
+    <view class="top-tip mb-10 PFSC-l fz-24">对象洗护服务仅支持<text class="PFSC-m fz-26">顺丰到付</text></view>
+    <!-- 开始选择地址区域 -->
+    <view class="address-area-wrap rela mb-10">
+      <!-- 未选地址的区域 -->
+      <view class="PFSC-m fz-36 non-address-tip" hidden="true">请添加收货地址</view>
+      <!-- 选中地址的区域 -->
+      <view class="address-area">
+        <view class="mr-50">
+          <view class="PFDC-m fz-32 mb-24">zzz<text class="ml-24">19951677889</text></view>
+          <view class="PFSC-l fz-22"><text class="default PFSC-l fz-16 bs-4 mr-10">默认地址</text>江苏省 南京市 江宁区 东山街道 龙眠大道东山街道号城市之光公寓A栋1932号</view>
+        </view>
+        <text class="iconfont icon-xiala fz-24 arrow"></text>
+      </view>
+      <!-- 底部彩色条的区域 -->
+      <view class="abso bottom-line">
+        <view class="color-block mr-20 {{index%2!=0?'even':''}}" wx:for="{{20}}" wx:key="id"></view>
+      </view>
+    </view>
+    <!-- 结束选择地址区域 -->
+    <!-- 开始顺丰上门时间 --> 
+    <view class="delivery-time-wrap flex-between mb-10 rela">
+      <view class="flex-s fz-28 PFSC-m">顺丰上门时间</view>
+      <picker class="flex-g1" mode="multiSelector" bindchange="pickerChange" bindcolumnchange="columnChange" value="{{timeIndex}}" range="{{timeArr}}">
+        <view class="flex-between flex-align-center delivery-time">
+          <view class="flex-g1"></view>
+          <view class="flex-between flex-align-center"><text class="PFSC-m fz-28 mr-10">{{timeArr[0][timeIndex[0]]}}</text><text class="number-font-700 fz-28"> {{timeArr[1][timeIndex[1]]}}</text><text class="iconfont icon-xiala arrow fz-18 ml-10"></text></view>
+        </view>
+      </picker>
+    </view>
+    <!-- 结束顺丰上门时间 -->
+    <!-- 开始商品信息区域 -->
+    <view class="services-wrap mb-10">
+      <view class="PFSC-m fz-28 mb-24">洗护详情</view>
+      <view class="flex-between flex-align-center" style="flex-wrap:no-wrap;">
+        <scroll-view scroll-x class="flex-between flex-g1" style="width: 70%">
+          <view class="img-list">
+            <van-image custom-class="mr-16" width="160rpx" height="160rpx" radius="12rpx"></van-image>
+            <van-image custom-class="mr-16" width="160rpx" height="160rpx" radius="12rpx"></van-image>
+            <van-image custom-class="mr-16" width="160rpx" height="160rpx" radius="12rpx"></van-image>
+            <van-image custom-class="mr-16" width="160rpx" height="160rpx" radius="12rpx"></van-image>
+            <van-image custom-class="mr-16" width="160rpx" height="160rpx" radius="12rpx"></van-image>
+          </view>
+        </scroll-view>
+        <view class="flex-s0 flex-between flex-align-center ml-10"><text class="number-font-700 fz-26">2</text><text class="PFSC-b fz-26 ml-10 mr-10 mr-16">件</text><text class="iconfont icon-xiala arrow fz-18"></text></view>
+      </view>
+    </view>
+    <!-- 结束商品信息区域 -->
+    <!-- 开始抵扣区域 -->
+    <view class="discount-wrap mb-10">
+      <!-- 优惠券 -->
+      <view class="coupon-area flex-between flex-align-center">
+        <view class="PFSC-m fz-24">优惠券</view>
+        <view class="PFSC-r fz-22">有3张可用<text class="iconfont icon-xiala fz-18 arrow"></text></view>
+      </view>
+      <!-- 积分 -->
+      <view class="integral-area flex-between flex-align-center" bindtap="clickIntegral">
+        <view class="PFSC-m fz-24">积分抵扣<text class="iconfont icon-shuoming ml-10 fz-22" style="color: rgba(190, 47, 47, 1)"></text><text class="ml-24 fz-20 PFSC-m">本单可使用3000积分，抵扣30元</text></view>
+        <view class="switch {{isIntegral?'pink-switch':''}} rela bs-10"><view class="switch-dot {{isIntegral?'pink-dot':''}} abso"></view></view>
+      </view>
+    </view>
+    <!-- 结束抵扣区域 -->
+    <!-- 开始商品金额计算区域 -->
+    <view class="price-compute-wrap mb-10">
+      <view class="flex-between flex-align-center PFSC-m"><view class="key fz-30">商品金额</view><view class="value fz-24">¥5588</view></view>
+      <view class="flex-between flex-align-center"><view class="key-grey PFSC-l fz-24">积分抵扣</view><view class="value-red fz-20">-¥20</view></view>
+      <view class="flex-between flex-align-center"><view class="key-grey PFSC-l fz-24">优惠券</view><view class="value-red fz-20">-¥400</view></view>
+      <view class="flex-between flex-align-center"><view class="key-grey PFSC-l fz-24">运费</view><view class="value-red fz-20 PFSC-r">满<text class="number-font-500">¥20</text>包邮</view></view>
+    </view>
+    <!-- 结束商品金额计算区域 -->
+    <view class="remark-area flex-between flex-align-center">
+      <view class="PFSC-m fz-24 flex-s0 mr-50">
+        订单备注
+      </view>
+      <input class="flex-g1" placeholder="输入备注信息" class="fz-24 PFSC-l" placeholder-class="PFSC-l fz-22 placeholder-color"></input>
+    </view>
+    <view class="contract-wrap mt-20 ml-28">
+      <van-checkbox checked-color="rgba(173, 134, 68, 1)" value="{{checkContract}}" bind:change="checkContract"><view class="PFSC-l fz-24" style="color:{{checkContract?'rgba(173, 134, 68, 1)':'rgba(153, 153, 153, 1)'}}">我已阅读并同意<text class="PFSC-r">《对象平台购买合同》</text></view></van-checkbox>
+    </view>
+    <!-- 开始结算区域 -->
+    <view class="settlement-area flex-between flex-align-center" style="bottom:{{isIphoneX?'68rpx':'0'}}">
+      <view class="PFSC-m fz-30">合计：<text class="fz-36 number-font-700">¥5508</text></view>
+      <van-button round="true" custom-class="pay-btn" color="rgba(190, 47, 47, 1)">立即支付</van-button>
+    </view>
+    <!-- 结束结算区域 -->
+    <view class="block" style="height:{{isIphoneX?'68rpx':''}}"></view>
+  </scroll-view>
+</view>
+<view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>

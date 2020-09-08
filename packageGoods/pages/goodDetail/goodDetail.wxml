@@ -1,0 +1,117 @@
+<!--packageGoods/pages/goodDetail/goodDetail.wxml-->
+<view class="container">
+  <scroll-view scroll-y style="height: 100vh">
+    <!-- 开始swiper区域 -->
+    <view class="swiper-wrap">
+      <swiper style="height: 100vw">
+        <swiper-item wx:for="{{4}}" wx:key="id">
+          <van-image width="100vw" height="100vw"></van-image>
+        </swiper-item>
+      </swiper>
+      <view class="indicator "><text>1</text>/4</view>
+    </view>
+    <!-- 结束swiper区域 -->
+    <!-- 开始商品介绍区域 -->
+    <view class="good-introduction-wrap mb-10">
+      <view class="good-price-line">
+        <view class="good-price flex-s0 fz-48 number-font-700">¥6690</view>
+        <view class="reference-price flex-g1 PFSC-r fz-24">市场参考价 ¥2069887</view>
+        <view class="depreciation flex-s0 PFSC-b fz-30" bindtap="viewDiscount"><text class="number-font-700">8.5</text>新<text class="shuoming PFSC-l fz-24 iconfont icon-shuoming"></text></view>
+      </view>
+      <view class="good-name-wrap PFSC-m fz-36"><text>CHANEL</text><text class="good-name PFSC-r fz-30">香奈儿 米色帆布经典手提口盖包</text></view>
+      <view class="member-card"></view>
+    </view>
+    <!-- 结束商品介绍区域 -->
+    <!-- 开始品质保证区域 -->
+    <view class="quality-guarantee-wrap mb-10">
+      <view class="quality-guarantee-area">
+        <view class="quality-guarantee PFSC-m fz-32"><text class="iconfont icon-zhengpin fz-40"></text>100%正品保证</view>
+        <view class="guarantee-text PFSC-l fz-22 mt-16">满1000包邮 | 支持转卖 | 非质量问题不退不换</view>
+      </view>
+      <view class="quality-dot">
+
+      </view>
+    </view>
+    <!-- 结束品质保证区域 -->
+    <!-- 开始商品详情区域 -->
+    <view class="goods-detail-wrap mb-10">
+      <view class="goods-detail-title PFSC-m fz-36">详情</view>
+      <view class="goods-param-area">
+        <view class="goods-param-title PFSC-m fz-28 mb-24">商品参数</view>
+        <view class="params ml-10 mb-10" wx:for="{{goodsParam}}" wx:key="id">
+          <view class="key bs-4 PFSC-m fz-24 flex-s0">{{item.key}}</view><view class="value PFSC-l fz-24 flex-g1 single-line">{{item.value}}</view>
+        </view>
+      </view>
+      <view>
+        <view class="test-introduction PFSC-m fz-28 mb-24 mt-34">检测说明</view>
+        <van-image width="670rpx" height="670rpx" fit="widthFix"></van-image>
+      </view>
+      <view>
+        <view class="show-details PFSC-m fz-28 mb-24 mt-34">细节展示</view>
+        <block wx:for="{{2}}" wx:key="id">
+          <van-image width="670rpx" height="670rpx" fit="widthFix"></van-image>
+        </block>
+      </view>
+    </view>
+    <!-- 结束商品详情区域 -->
+    <!-- 开始常见问题区域 -->
+    <view class="faq-wrap mb-10">
+      <view class="faq-title fz-36 PFSC-m mb-24">常见问题</view>
+        <view class="question PFSC-m fz-28 mb-30"  wx:for="{{FAQs}}" wx:key="id" bindtap="clickQuestion" data-index="{{index}}">
+        {{index+1}}.{{item.question}}<text class="{{item.hidden?'reverse':''}} iconfont icon-xiala1 fz-20"></text>
+        <view class="answer PFSC-r fz-20 mt-20" hidden="{{item.hidden}}"><text>{{item.answer}}</text></view>
+      </view>
+    </view>
+    <!-- 结束常见问题区域 -->
+    <!-- 开始价格说明区域 -->
+    <view class="price-description-wrap">
+      <view class="price-description-title fz-36 PFSC-m mb-24">价格说明</view>
+      <view class="question PFSC-m fz-28 mb-30" wx:for="{{priceDescription}}" wx:key="id">
+        {{index+1}}.{{item.question}}
+        <view class="answer PFSC-r fz-20 mt-20">{{item.answer}}</view>
+      </view>
+    </view>
+    <!-- 结束价格说明区域 -->
+    <!-- 开始商品推荐区域 -->
+    <recommendGood goodList="{{goodList}}"></recommendGood>
+    <!-- 结束商品推荐区域 -->
+    <view class="block" style="height:{{isIphoneX?'168rpx':''}}"></view>
+  </scroll-view>
+  <!-- 开始底部商品行动点区域 -->
+  <view class="good-actions flex-between flex-align-center" style="bottom:{{isIphoneX?'68rpx':'0'}}">
+    <view class="icons flex-between flex-align-center">
+      <view class="fz-20 PFSC-r">
+        <text class="iconfont icon-taolunqu"></text>
+        客服
+      </view>
+      <view class="fz-20 PFSC-r">
+        <text class="iconfont icon-shoucang1"></text>
+        收藏
+      </view>
+      <view class="fz-20 PFSC-r">
+        <text class="iconfont icon-gouwudai"></text>
+        购物车
+      </view>
+    </view>
+    <view class="btns">
+      <van-button style="margin-right:20rpx" round="true" custom-class="good-actions-btn" hairline="true" color="rgba(173, 134, 68, 1)">加入购物车</van-button>
+      <van-button round="true" custom-class="good-actions-btn" hairline="true" color="rgba(190, 47, 47, 1)" bind:click="goSettlement">立即购买</van-button>
+    </view>
+  </view>
+  <view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>
+  <!-- 结束底部商品行动点区域 -->
+  <!-- 开始成色评级弹窗 -->
+  <popupMenu show="{{showPop}}">
+    <view class="rate-wrap">
+      <view class="title PFSC-m fz-30 mb-76">成色评级说明</view>
+      <view class="flex-between flex-align-center mb-50 rate"><view class="rate-key flex-s0 PFSC-m fz-24">全新</view><view class="flex-g1 PFSC-l fz-24">商品全新，无任何使用痕迹，附件齐全</view></view>
+      <view class="flex-between flex-align-center mb-50 rate"><view class="rate-key flex-s0 PFSC-m fz-24">9.9新</view><view class="flex-g1 PFSC-l fz-24">商品近新，几乎无使用痕迹，附件缺失</view></view>
+      <view class="flex-between flex-align-center mb-50 rate"><view class="rate-key flex-s0 PFSC-m fz-24">9.8新</view><view class="flex-g1 PFSC-l fz-24">商品有极细微的使用、氧化等痕迹，品相佳</view></view>
+      <view class="flex-between flex-align-center mb-50 rate"><view class="rate-key flex-s0 PFSC-m fz-24">9.5新</view><view class="flex-g1 PFSC-l fz-24">整体成色较新，轻微使用痕迹，氧化、边角磨损但不明显，整体品相完整。</view></view>
+      <view class="flex-between flex-align-center mb-50 rate"><view class="rate-key flex-s0 PFSC-m fz-24">9.0新</view><view class="flex-g1 PFSC-l fz-24">有日常使用痕迹，局部有少数划痕、污渍、金属氧化等情况，品相良好。</view></view>
+      <view class="flex-between flex-align-center mb-50 rate"><view class="rate-key flex-s0 PFSC-m fz-24">8.5新</view><view class="flex-g1 PFSC-l fz-24">有明显使用痕迹，出现明显局部划痕、污渍等， 品相略差但不影响正常使用</view></view>
+      <view class="i-know PFSC-m fz-28 bs-35 mt-40" bindtap="iKnow">我知道了</view>
+    </view>
+  </popupMenu>
+  <!-- 结束成色评级弹窗 -->
+</view>

@@ -1,0 +1,4 @@
+<!--components/searchInput/searchInput.wxml-->
+<view class="search-area">
+    <input class="ipt fz-20 bs-20" placeholder-style="color: rgba(181,181,181,100);" placeholder-class="fz-20 bs-20" placeholder="{{value}}" />
+  </view>

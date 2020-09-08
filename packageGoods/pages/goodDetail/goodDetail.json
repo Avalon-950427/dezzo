@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index",
+    "van-button": "@vant/weapp/button/index",
+    "recommendGood": "/components/recommendGood/recommendGood",
+    "popupMenu": "/components/popupMenu/popupMenu"
+  }
+}

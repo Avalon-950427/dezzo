@@ -1,0 +1,18 @@
+/* components/searchInput/searchInput.wxss */
+@import '/app.wxss';
+.search-area{
+  width: 100vw;
+  height: 116rpx;
+  padding-top: 24rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.ipt{
+  width: 710rpx;
+  height: 72rpx;
+  margin: auto;
+  text-align: center;
+  color: rgba(181,181,181,100);
+  background-color: rgba(0,0,0,0.04);
+}

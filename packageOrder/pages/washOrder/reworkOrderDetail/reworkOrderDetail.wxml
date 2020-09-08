@@ -1,0 +1,140 @@
+<!--packageOrder/pages/washOrder/reworkOrderDetail/reworkOrderDetail.wxml-->
+<scroll-view scroll-y style="height: 100%">
+  <view class="container">
+    <!-- 开始物件订单状态区域 -->
+    <view class="status-wrap mb-10">
+      <view class="PFSC-m fz-32 mb-8">待寄出</view>
+      <view class="PFSC-r fz-24">对象签收包裹后并核对物件无误后进行服务</view>
+      <view class="status-area mt-34">
+        <view class="rela mb-10" style="height: 20rpx;">
+          <progress class="abso" percent="12.5" stroke-width="3" activeColor="rgba(190, 47, 47, 1)"></progress>
+          <view class="flex-between abso dot-line">
+            <view class="dot" wx:for="{{5}}" wx:key="id"></view>
+          </view>
+        </view>
+        <view class="flex-between">
+          <view class="PFSC-r fz-20 {{index==0||index==4?index==0?'wd12dot5':'wd12dot5 wdend':'wd25'}}" style="color:rgba(153, 153, 153, 1)" wx:for="{{steps}}" wx:key="id">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 结束物件订单状态区域 -->
+    <!-- 开始物件审核状态区域 -->
+    <view class="audit-status-wrap mb-10">
+      <view class="PFSC-m fz-30 mt-32 mb-18">售后清单</view>
+      <view wx:for="{{2}}" wx:key="id" class="mb-14">
+        <view class="PFSC-l fz-24 mb-14">物件编号：0722110</view>
+        <view class="flex flex-align-center">
+          <van-image custom-class="flex-s0" width="160rpx" height="160rpx" radius="12rpx"></van-image>
+          <view class="ml-28 flex-g1">
+            <view class="PFSC-m fz-30 mb-14">YEEZY</view>
+            <view class="PFSC-l fz-24">深度清洁；粘胶</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 结束物件审核状态区域 -->
+    <!-- 开始售后驳回原因区域 -->
+    <view class="reason-wrap mb-10">
+      <view class="PFSC-m fz-30 mb-30">原因</view>
+      <view class="flex flex-align-center mb-14" wx:for="{{2}}" wx:key="id">
+        <van-image width="160rpx" height="160rpx" radius="12rpx"></van-image>
+        <view class="PFSC-m fz-28 ml-28" style="color: rgba(102, 102, 102, 1)">平台未造成配件未丢失</view>
+      </view>
+    </view>
+    <!-- 结束售后驳回原因区域 -->
+    <!-- 开始寄回地址区域 -->
+    <view class="back-address-wrap mb-10">
+      <view class="flex flex-align-center mb-8">
+        <view class="key fz-24 PFSC-l flex-s0">寄回地址</view>
+        <view><text class="PFSC-m fz-26">我</text><text class="number-font-700 fz-24 ml-28">19951677889</text></view>
+      </view>
+      <view class="flex flex-align-center">
+        <view class="key flex-s0"></view>
+        <view class="PFSC-l fz-22" style="width: 420rpx">江苏省 南京市 建邺区 江心洲街道保利紫荆公馆6-104室</view>
+      </view>
+    </view>
+    <!-- 结束寄回地址区域 -->
+    <!-- 开始订单信息区域 -->
+    <view class="order-info-wrap">
+      <view class="flex flex-align-center mb-18">
+        <view class="fz-24 PFSC-l key flex-s0">原订单编号</view>
+        <view><text class="number-font-700 fz-24">2020072233171</text><text class="copy PFSC-l fz-20 ml-28">复制</text></view>
+      </view>
+      <view class="flex flex-align-center mb-18">
+        <view class="fz-24 PFSC-l key flex-s0">原订单编号</view>
+        <view class="number-font-700 fz-24">2020-07-05  13:52:21</view>
+      </view>
+      <view class="flex flex-align-center mb-18">
+        <view class="fz-24 PFSC-l key flex-s0">售后数量</view>
+        <view class="number-font-700 fz-24">1</view>
+      </view>
+      <view class="flex flex-align-center mb-18">
+        <view class="fz-24 PFSC-l key flex-s0">售后单号</view>
+        <view class="number-font-700 fz-24">82020072233171</view>
+      </view>
+      <view class="flex flex-align-center mb-18">
+        <view class="fz-24 PFSC-l key flex-s0">售后原因</view>
+        <view class="PFSC-r fz-24">服务未达标</view>
+      </view>
+      <view class="flex flex-align-center mb-18">
+        <view class="fz-24 PFSC-l key flex-s0">寄出时间</view>
+        <view class="fz-24 number-font-700">2020-07-07  14:00-16:00 </view>
+      </view>
+      <view class="flex flex-align-center mb-8">
+        <view class="fz-24 PFSC-l key flex-s0">寄出时间</view>
+        <view><text class="PFSC-m fz-26">我</text><text class="number-font-700 fz-24 ml-28">19951677889</text></view>
+      </view>
+      <view class="flex flex-align-center mb-18">
+        <view class="key flex-s0"></view>
+        <view class="PFSC-l fz-22" style="width: 420rpx">江苏省 南京市 建邺区 江心洲街道保利紫荆公馆6-104室</view>
+      </view>
+    </view>
+    <!-- 结束订单信息区域 -->
+    <view class="block" style="height:{{isIphoneX?'168rpx':''}}"></view>
+  </view>
+</scroll-view>
+<!-- 开始底部按钮区域 -->
+<view class="flex flex-align-center btn-wrap" style="bottom: {{isIphoneX?'68rpx':''}}">
+  <van-button custom-class="btn" plain color="rgba(153, 153, 153, 1)" round="true">取消订单</van-button>
+  <van-button custom-class="btn" plain color="rgba(190, 47, 47, 1)" round="true" open-type="contact">联系客服</van-button>
+  <van-button custom-class="btn" color="rgba(190, 47, 47, 1)" round="true">取消售后</van-button>
+</view>
+<view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>
+<!-- 结束底部按钮区域 -->
+<popupMenu show="{{show}}">
+  <view class="popup-wrap">
+    <view class="fz-30 PFSC-m mb-40 text-center">修改预约信息</view>
+    <!-- 开始地址选择区域 -->
+    <view class="address-area-wrap bs-12 mb-30">
+      <view class="PFSC-m fz-30 mb-24 ml-30">取件地址</view>
+      <view class="address-area flex flex-align-center mb-28">
+        <view class="flex-g1">
+          <view class="PFSC-m fz-34 mb-24 ml-30"><text>zzz</text><text class="ml-24">19951677889</text></view>
+          <view class="PFSC-l fz-22 ml-30">江苏省 南京市 江宁区 东山街道 龙眠大道东山街道号城市之光公寓A栋1932号</view>
+        </view>
+        <text class="iconfont icon-xiala arrow fz-22 flex-s0 ml-60 mr-50"></text>
+      </view>
+       <view class="flex">
+        <view class="color-block mr-20 {{index%2!=0?'even':''}}" wx:for="{{20}}" wx:key="id"></view>
+      </view>
+    </view>
+    <!-- 结束地址选择区域 -->
+    <!-- 开始时间选择区域 -->
+    <view class="time-area-wrap bs-12">
+      <view class="PFSC-m fz-30 mb-30">取件时间</view>
+      <view class="time-area flex">
+        <view class="flex flex-column flex-s0">
+          <view class="date text-center PFSC-r fz-24" wx:for="{{times[0]}}" wx:key="id">{{item}}</view>
+        </view>
+        <view class="flex-g1 flex-between flex-align-center; flex-wrap ml-60">
+          <view class="time text-center PFSC-r fz-22" wx:for="{{times[1]}}" wx:key="id">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 结束时间选择区域 -->
+    <view class="popup-btn-wrap mt-50 flex">
+      <van-button custom-class="btn popup-btn" round="true" color="rgba(153, 153, 153, 1)" plain bindtap="hidePopup">取消</van-button>
+      <van-button custom-class="btn popup-btn" round="true" color="rgba(190, 47, 47, 1)">确认修改</van-button>
+    </view>
+  </view>
+</popupMenu>

@@ -1,0 +1,54 @@
+<!--pages/goodClassify/goodClassify.wxml-->
+<view class="container">
+  <!-- 开始搜索区域 -->
+  <searchInput value="搜索商品、品牌"></searchInput>
+  <!-- 结束搜索区域 -->
+  <!-- 开启商品分类区域 -->
+  <view class="goods-classify-wrap">
+    <!-- 开始大分类区域 -->
+    <view class="big-classify">
+      <scroll-view style="height: 100%;" scroll-y>
+        <view class="big-classify-item fz-30 PFSC-r {{selectedBigClassifyIndex==index?'active-big-classify-item PFSC-m fz-34':''}}" wx:for="{{bigClassify}}" wx:key="id" bindtap="chooseBigClassify" data-index="{{index}}">{{item}}</view>
+      </scroll-view>
+    </view>
+    <!-- 结束大分类区域 -->
+    <!-- 开始小分类区域 -->
+    <view class="small-classify">
+      <scroll-view style="height: 100%" scroll-y scroll-into-view="{{toView}}" bindscroll="scrollBrand">
+        <view class="small-classify-name PFSC-m fz-30">大牌专区</view>
+        <!-- 非品牌小分类区域 -->
+        <view class="small-classify-info" hidden="{{selectedBigClassifyIndex==1}}">
+          <view class="small-classify-item mb-24">
+            <van-image radius="20rpx" width="132rpx" height="132rpx"></van-image>
+            <view class="PFSC-l fz-24 mt-16">HERMIS</view>
+          </view>
+          <view class="small-classify-item mb-24">
+            <van-image radius="20rpx" width="132rpx" height="132rpx"></van-image>
+            <view class="PFSC-l fz-24 mt-16">HERMIS</view>
+          </view>
+          <view class="small-classify-item mb-24">
+            <van-image radius="20rpx" width="132rpx" height="132rpx"></van-image>
+            <view class="PFSC-l fz-24 mt-16">HERMIS</view>
+          </view>
+          <view class="small-classify-item mb-24">
+            <van-image radius="20rpx" width="132rpx" height="132rpx"></van-image>
+            <view class="PFSC-l fz-24 mt-16">HERMIS</view>
+          </view>
+        </view>
+        <!-- 品牌小分类区域 -->
+        <view class="brand-info" hidden="{{selectedBigClassifyIndex!=1}}">
+          <block wx:for="{{alphabets}}" wx:key="index">
+            <view class="first-element PFSC-m fz-32 mb-24" id="{{item}}">{{item}}</view>
+            <view class="brand-name PFSC-r fz-24 mb-24">AMARNI </view>
+            <view class="brand-name PFSC-r fz-24 mb-24">LOUIS VUITTON </view>
+          </block>
+          <view class="alphabets-list">
+            <view class="PFSC-r fz-24" style="color:{{index==activeAlphabetsIndex?'#BE2F2F':'#000'}}" wx:for="{{alphabets}}" wx:key="index" bindtap="chooseAlphabet" data-id="{{item}}" data-index="{{index}}">{{item}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 结束小分类区域 -->
+  </view>
+  <!-- 结束商品分类区域 -->
+</view>

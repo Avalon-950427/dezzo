@@ -1,0 +1,228 @@
+/* packageGoods/pages/goodDetail/goodDetail.wxss */
+.container{
+  background-color: #F3F3F3;
+}
+
+/* 开始swiper区域样式 */
+.swiper-wrap{
+  position: relative;
+}
+
+.indicator{
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+}
+/* 结束swiper区域样式 */
+
+/* 开始商品介绍区域样式 */
+
+.good-introduction-wrap{
+  padding: 40rpx 30rpx 0;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.good-price-line{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.good-price{
+  color: #BE2F2F;
+}
+
+.reference-price{
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  color: #999999;
+}
+
+.shuoming{
+  display: inline-block;
+  margin: 0 10rpx;
+  vertical-align: middle;
+  color: #BE2F2F;
+}
+
+.good-name-wrap{
+  display: flex;
+  align-items: center;
+}
+
+.good-name{
+  display: inline-block;
+  margin-left: 20rpx;
+  padding-bottom: 5rpx;
+}
+
+.member-card{
+  width: 690rpx;
+  height: 80rpx;
+  margin-top: 22rpx;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #F3F3F3;
+}
+
+/* 结束商品介绍区域样式 */
+
+/* 开始品质保证区域 */
+
+.quality-guarantee-wrap{
+  padding: 35rpx 40rpx 35rpx 30rpx;
+  color: #333;
+  background-color: white;
+}
+
+.quality-guarantee{
+  margin-left: 5rpx;
+  color: black;
+}
+
+.quality-guarantee text{
+  display: inline-block;
+  margin-right: 14rpx;
+  vertical-align: text-bottom;
+  color: #BE2F2F;
+}
+
+.guarantee-text{
+  padding-left: 10rpx;
+}
+
+/* 结束品质保证区域 */
+
+/* 开始商品详情区域样式 */
+
+.goods-detail-wrap{
+  padding: 24rpx 40rpx 50rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.goods-detail-title{
+  text-align: center;
+  color: #333;
+}
+
+.goods-param-title,.test-introduction,.show-details{
+  color: rgba(0, 0, 0, 1);
+}
+
+.params{
+  display: flex;
+}
+
+.key{
+  width: 140rpx;
+  height: 60rpx;
+  margin-right: 50rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: rgba(51, 51, 51, 1);
+  background-color: #F3F3F3;
+}
+
+.value{
+  line-height: 60rpx;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* 结束商品详情区域样式 */
+
+/* 开始常见问题和价格说明区域 */
+
+.faq-wrap,.price-description-wrap{
+  padding: 35rpx 40rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.faq-title,.price-description-title{
+  text-align: center;
+}
+
+.question .iconfont{
+  display: inline-block;
+  margin-left: 6rpx;
+  vertical-align: middle;
+  transition: transform 0.5s;
+}
+
+.reverse{
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+.answer{
+  letter-spacing: 1rpx;
+  color: #999;
+}
+
+/* 结束常见问题和价格说明区域 */
+
+/* 开始商品行动点样式 */
+
+.good-actions{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100rpx;
+  padding: 0 30rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.icons{
+  width: 35%;
+}
+
+.icons view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3);
+}
+
+.good-actions-btn{
+  width: 200rpx;
+  height: 72rpx !important;
+  padding: 0 !important;
+  font-family: PingFangSC-Medium,sy-m;
+}
+
+/* 结束商品行动点样式 */
+
+/* 开始成色评级slot区域样式 */
+
+.rate-wrap{
+  padding: 40rpx 40rpx 30rpx 60rpx;
+  box-sizing: border-box;
+}
+
+.rate-wrap .title{
+  text-align: center;
+}
+
+.rate-key{
+  width: 150rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.rate{
+  flex-wrap: nowrap !important;
+}
+
+.i-know{
+  width: 420rpx;
+  height: 70rpx;
+  margin: auto;
+  text-align: center;
+  line-height: 70rpx;
+  color: white;
+  background-color: rgba(190, 47, 47, 1);
+}
+
+/* 结束成色评级slot区域样式 */

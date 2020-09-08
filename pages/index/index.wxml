@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索框区域 -->
+  <searchInput value="搜你想要的的一切"></searchInput>
+  <!-- 分类区域 -->
+  <scroll-view scroll-x style="width: 100vw">
+    <view class="classify-tab-wrap">
+      <view class="classify-tab PFSC-m {{index==activeClassifyTabIndex?'fz-32  active-tab':''}}" wx:for="{{classifyTab}}" wx:key="item" bindtap="chooseClassifyTab" data-index="{{index}}">{{item}}</view>
+    </view>
+  </scroll-view>
+  <swiper current="{{activeClassifyTabIndex}}" style="height:calc(100vh - 196rpx)" duration="80" skip-hidden-item-layout="true" easing-function="easeOutCubic"  bindchange="changeSwiperItem">
+    <swiper-item wx:for="{{classifyTab}}" wx:key="index" item-id="{{index}}">
+      <scroll-view scroll-y style="height: 100%">
+        <!-- 开始swiper区域 -->
+        <swiper style="width: 100vw;height: 440rpx;">
+          <swiper-item>
+            <van-image width="100vw" height="100%"></van-image>
+          </swiper-item>
+        </swiper>
+        <!-- 结束swiper区域 -->
+        <view hidden="{{activeClassifyTabIndex!=0}}">
+          <!-- 开始服务分类区域 -->
+          <view class="hot-service-wrap">
+            <view class="PFSC-m fz-32">热门服务</view>
+            <view class="flex-between">
+              <view class="hot-service-item bs-12 fz-20" wx:for="{{hotServices}}" wx:key="item" bindtap="chooseService" data-url="{{item.url}}">{{item.name}}</view>
+            </view>
+          </view>
+          <!-- 结束服务分类区域 -->
+          <!-- 开始最新上架区域 -->
+          <view class="new-putaway-wrap">
+            <view class="title-line flex-between">
+              <view class="PFSC-m fz-32">最新上架</view>
+              <view class="more PFSC-m fz-24">查看更多</view>
+            </view>
+            <scroll-view scroll-x style="100%">
+              <view class="putaway-goods-list flex-between">
+                <view class="putaway-good" wx:for="{{5}}" wx:key="item">
+                  <van-image width="180rpx" height="180rpx"></van-image>
+                  <view class="new-putaway-name PFSC-m fz-24">Bottega Veneta</view>
+                  <view class="new-putaway-price number-font-500 fz-26">¥11300<text class="number-font-300 fz-18 underline"> ¥9800</text></view>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+          <!-- 结束最新上架区域 -->
+          <recommendGood goodList="{{goodList}}"></recommendGood>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,38 @@
+<!--packageOrder/pages/washOrder/applyRework/applyRework.wxml-->
+
+<scroll-view scroll-y style="height: 100%">
+  <view class="container">
+    <view class="PFSC-m fz-32 mb-24">选择需要售后的物件<text class="asterisk">*</text></view>
+    <!-- 开始选择售后物件区域 -->
+    <view class="flex good-wrap ml-28">
+      <view class="mr-40 mb-30" wx:for="{{5}}" wx:key="id" bindtap="chooseReworkGood" data-index="{{index}}">
+        <van-image width="160rpx" height="160rpx" radius="12rpx" custom-class="{{reworkGoodIndex==index?'img-border':''}}"></van-image>
+        <view class="fz-20 text-center {{reworkGoodIndex==index?'PFSC-r choosed':'PFSC-l'}}">物件编号</view>
+        <view class="fz-24 text-center {{reworkGoodIndex==index?'PFSC-r choosed':'PFSC-l'}}">0722110</view>
+      </view>
+    </view>
+    <!-- 结束选择售后物件区域 -->
+    <!-- 开始售后原因区域 -->
+    <view class="PFSC-m fz-32">售后原因项目<text class="asterisk">*</text></view>
+    <view class="rework-reason-wrap flex">
+      <view class="rework-reason PFSC-r fz-24 bs-30 mr-20 mt-24 {{reasonIndex==index?'choosed-reason':''}}" wx:for="{{reworkReason}}" wx:key="id" bindtap="chooseReworkReason" data-index="{{index}}">{{item}}</view>
+    </view>
+    <textarea class="mt-20 PFSC-r fz-24 textarea" placeholder="写明其他售后原因" placeholder-style="color: rgba(102, 102, 102, 1)"></textarea>
+    <!-- 结束售后原因区域 -->
+    <!-- 开始上传凭证区域 -->
+    <view class="mt-34 mb-24 flex-between flex-align-center">
+      <view class="fz-32 PFSC-m">上传凭证<text class="asterisk">*</text></view>
+      <view class="PFSC-r fz-20" style="color: rgba(190, 47, 47, 1)">请拍摄能展现问题的图片，不得少于1张。</view>
+    </view>
+    <view class="flex flex-wrap">
+      <van-image wx:for="{{6}}" wx:key="id" width="140rpx" height="140rpx" custom-class="mr-10 mb-20"></van-image>
+    </view>
+    <!-- 结束上传凭证区域 -->
+    <view class="block" style="height:{{isIphoneX?'168rpx':'100rpx'}}"></view>
+  </view>
+</scroll-view>
+<view class="bottom-btn-wrap flex" style="bottom: {{isIphoneX?'68rpx':'0'}}">
+  <van-button round="true" color="rgba(190, 47, 47, 1)" custom-class="btn">提交售后申请</van-button>
+</view>
+<view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>
+

@@ -1,0 +1,154 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": false,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": false,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.12.0",
+	"appid": "wxfb223eb0d0373870",
+	"projectname": "Dezzo",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "商品分类",
+					"pathName": "pages/goodClassify/goodClassify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品列表",
+					"pathName": "packageGoods/pages/goodList/goodList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "packageGoods/pages/goodDetail/goodDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择洗护分类",
+					"pathName": "packageWash/pages/chooseWashClassify/chooseWashClassify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择洗护物件详情",
+					"pathName": "packageWash/pages/chooseWashDetail/chooseWashDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "结算",
+					"pathName": "packageGoods/pages/settlement/settlement",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "洗护订单列表",
+					"pathName": "packageOrder/pages/washOrder/orderList/orderList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "洗护订单详情",
+					"pathName": "packageOrder/pages/washOrder/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "洗护结算",
+					"pathName": "packageWash/pages/settlement/settlement",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请售后",
+					"pathName": "packageOrder/pages/washOrder/applyRework/applyRework",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "售后订单",
+					"pathName": "packageOrder/pages/washOrder/reworkOrderDetail/reworkOrderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品订单详情",
+					"pathName": "packageOrder/pages/goodOrder/goodOrderDetail/goodOrderDetail",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<!--components/recommendGood/recommendGood.wxml-->
+<!-- 开始推荐商品区域 -->
+<view class="recommend-goods-wrap">
+  <view class="PFSC-m fz-32">推荐商品</view>
+  <view class="recommend-goods flex-between">
+    <view class="recommend-goods-item" wx:for="{{goodList}}" wx:key="item" bindtap="goGoodDetail">
+      <van-image width="300rpx" height="300rpx"></van-image>
+      <view class="recommend-goods-name PFSC-m fz-30">Hermes</view>
+      <view class="recommend-goods-desc PFSC-l fz-24">枣红色经典气质手包</view>
+      <view class="recommend-goods-price number-font-600 fz-30">¥6300<text class="original-price number-font-400 fz-20 underline"> ¥9800</text></view>
+    </view>
+  </view>
+</view>
+<!-- 结束推荐商品区域 -->

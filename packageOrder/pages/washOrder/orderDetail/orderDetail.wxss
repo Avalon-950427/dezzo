@@ -1,0 +1,127 @@
+/* packageOrder/pages/washOrder/orderDetail/orderDetail.wxss */
+.container{
+  background-color: #f8f8f8;
+}
+
+/* 开始顶部状态栏区域样式 */
+
+.status-wrap{
+  width: 100%;
+  padding: 22rpx 40rpx 16rpx;
+  background-color:white;
+  box-sizing: border-box;
+}
+
+progress{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: calc(100% - 20rpx);
+  margin: auto;
+}
+
+.dot-line{
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.dot{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: rgba(241, 241, 241, 1);
+  border-radius: 50%;
+}
+
+.wd12dot5{
+  width: 12.5%;
+}
+
+.wdend{
+  text-align: end;
+}
+
+.wd25{
+  width: 25%;
+  text-align: center;
+}
+
+/* 结束顶部状态栏区域样式 */
+
+/* 开始洗护清单区域样式 */
+
+.clean-list{
+  width: 100%;
+  padding: 32rpx 40rpx 40rpx;
+  background-color: white;
+}
+
+/* 结束洗护清单区域样式 */
+
+/* 开始优惠抵扣和寄回地址区域样式 */
+
+.discount-wrap,.address-wrap{
+  width: 100%;
+  padding: 36rpx 40rpx 34rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* 结束优惠抵扣和寄回地址区域样式 */
+
+/* 开始订单备注区域样式 */
+
+.remark-wrap{
+  width: 100%;
+  padding: 44rpx 40rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* 结束订单备注区域样式 */
+
+/* 开始订单信息区域样式 */
+
+.order-info-wrap{
+  width: 100%;
+  padding: 30rpx 40rpx 18rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.copy{
+  display: inline-block;
+  width: 84rpx;
+  height: 42rpx;
+  text-align: center;
+  line-height: 42rpx;
+  background-color: rgba(216, 216, 216, 1);
+  border-radius: 21rpx;
+}
+
+/* 结束订单信息区域样式 */
+
+/* 开始按钮区域样式 */
+
+.btn-wrap{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100rpx;
+  padding: 0 40rpx;
+  box-shadow: 0 0 8rpx 0 rgba(0,0,0,0.05);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.btn{
+  height: 60rpx !important;
+  margin-left: 20rpx;
+  font-family: "PingFangSC-Medium", "sy-m";
+  font-size: 26rpx !important;
+}
+
+/* 结束按钮区域样式 */

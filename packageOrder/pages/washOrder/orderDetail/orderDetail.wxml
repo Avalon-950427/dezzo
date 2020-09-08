@@ -1,0 +1,81 @@
+<!--packageOrder/pages/washOrder/orderDetail/orderDetail.wxml-->
+<view class="container">
+  <scroll-view scroll-y style="height: 100vh">
+    <!-- 开始顶部状态栏区域 -->
+    <view class="status-wrap mb-10">
+      <view class="PFSC-m fz-32 mb-8">待寄出</view>
+      <view class="PFSC-r fz-24">对象签收包裹后并核对物件无误后进行服务</view>
+      <view class="status-area mt-34">
+        <view class="rela mb-10" style="height: 20rpx;">
+          <progress class="abso" percent="12.5" stroke-width="3" activeColor="rgba(190, 47, 47, 1)"></progress>
+          <view class="flex-between abso dot-line">
+            <view class="dot" wx:for="{{5}}" wx:key="id"></view>
+          </view>
+        </view>
+        <view class="flex-between">
+          <view class="PFSC-r fz-20 {{index==0||index==4?index==0?'wd12dot5':'wd12dot5 wdend':'wd25'}}" style="color:rgba(153, 153, 153, 1)" wx:for="{{steps}}" wx:key="id">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 结束顶部状态栏区域 -->
+    <!-- 开始洗护清单区域 -->
+    <view class="clean-list mb-10">
+      <view class="PFSC-m fz-32">洗护清单</view>
+      <view class="mt-20" wx:for="{{2}}" wx:key="id">
+        <view class="PFSC-r fz-24 mb-14">物件编号：0722110</view>
+        <view class="flex flex-align-center">
+          <van-image radius="12rpx" width="160rpx" height="160rpx"></van-image>
+          <view class="ml-28">
+            <view class="PFSC-m fz-30 mb-14">MIU MIU</view>
+            <view class="PFSC-r fz-24">改色；边油修复；粘胶</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 结束洗护清单区域 -->
+    <!-- 开始优惠抵扣区域 -->
+    <view class="discount-wrap mb-10">
+      <view class="flex-between mb-8 fz-22 PFSC-r"><text>优惠券</text><text class="number-font-300">-¥39</text></view>
+      <view class="flex-between mb-10 fz-22 PFSC-r"><text>积分抵扣</text><text class="number-font-300">-¥3</text></view>
+      <view class="flex-between fz-28 PFSC-m"><text>实付金额</text><text class="number-font-700 fz-28">¥468</text></view>
+    </view>
+    <!-- 结束优惠抵扣区域 -->
+    <!-- 开始寄回地址区域 -->
+    <view class="address-wrap mb-10 flex-between">
+      <view class="PFSC-m fz-28 flex-g0">寄回地址</view>
+      <view class="flex-s1" style="width: 420rpx;">
+        <view style="text-align:end;"><text class="fz-26 PFSC-m">郭笛</text><text class="number-font-700 fz-24 ml-28">17715874616</text></view>
+        <view class="PFSC-r fz-24" style="text-align: justify">江苏省 南京市 建邺区 江心洲街道保利紫荆公馆6-104室</view>
+      </view>
+    </view>
+    <!-- 结束寄回地址区域 -->
+    <!-- 开始订单备注区域 -->
+    <view class="remark-wrap flex-between flex-align-center mb-10">
+      <view class="PFSC-m fz-28">订单备注</view>
+      <view class="PFSC-r fz-24">请下周三发货</view>
+    </view>
+    <!-- 结束订单备注区域 -->
+    <!-- 开始订单信息区域 -->
+    <view class="order-info-wrap">
+      <view class="flex-between mb-18"><view class="PFSC-r fz-24">订单编号</view><view class="number-font-700 fz-24"><text>2020072233171</text><text class="PFSC-r fz-24 ml-28 copy" bindtap="copy">复制</text></view></view>
+      <view class="flex-between mb-18"><view class="PFSC-r fz-24">下单时间</view><view class="number-font-700 fz-24">2020-07-05  13:52:21</view></view>
+      <view class="flex-between mb-18"><view class="PFSC-r fz-24">寄出时间</view><view class="number-font-700 fz-24">2020-07-07  14:00-16:00 </view></view>
+      <view class="flex-between mb-18"><view class="PFSC-r fz-24">寄出地址</view> <view class="flex-s1" style="width: 420rpx;">
+        <view style="text-align:end;"><text class="fz-26 PFSC-m">郭笛</text><text class="number-font-700 fz-24 ml-28">17715874616</text></view>
+        <view class="PFSC-r fz-24" style="text-align: justify">江苏省 南京市 建邺区 江心洲街道保利紫荆公馆6-104室</view>
+      </view></view>
+      <view class="flex-between mb-18"><view class="PFSC-r fz-24">支付方式</view><view class="PFSC-m fz-24">微信支付</view></view>
+      <view class="flex-between mb-18"><view class="PFSC-r fz-24">支付时间</view><view class="number-font-700 fz-24">2020-07-05  13:53:21</view></view>
+    </view>
+    <!-- 结束订单信息区域 -->
+    <view class="block" style="height:{{isIphoneX?'168rpx':''}}"></view>
+  </scroll-view>
+</view>
+<!-- 开始按钮区域 -->
+<view class="flex flex-align-center btn-wrap" style="bottom: {{isIphoneX?'68rpx':''}}">
+  <van-button custom-class="btn" plain color="rgba(153, 153, 153, 1)" round="true">取消订单</van-button>
+  <van-button custom-class="btn" plain color="rgba(190, 47, 47, 1)" round="true" open-type="contact">联系客服</van-button>
+  <van-button custom-class="btn" color="rgba(190, 47, 47, 1)" round="true">修改寄出信息</van-button>
+</view>
+<view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>
+<!-- 结束按钮区域 -->

@@ -1,0 +1,196 @@
+/* packageOrder/pages/washOrder/reworkOrderDetail/reworkOrderDetail.wxss */
+.container{
+  background-color: #f8f8f8;
+}
+
+/* 开始顶部状态栏区域样式 */
+
+.status-wrap{
+  width: 100%;
+  padding: 22rpx 40rpx 16rpx;
+  background-color:white;
+  box-sizing: border-box;
+}
+
+progress{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: calc(100% - 20rpx);
+  margin: auto;
+}
+
+.dot-line{
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.dot{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: rgba(241, 241, 241, 1);
+  border-radius: 50%;
+}
+
+.wd12dot5{
+  width: 12.5%;
+}
+
+.wdend{
+  text-align: end;
+}
+
+.wd25{
+  width: 25%;
+  text-align: center;
+}
+
+/* 结束顶部状态栏区域样式 */
+
+
+/* 开始物件审核状态区域 */
+
+.audit-status-wrap{
+  padding: 32rpx 40rpx 26rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* 结束物件审核状态区域 */
+
+/* 开始售后驳回原因区域样式 */
+.reason-wrap{
+  padding: 32rpx 40rpx 26rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+/* 结束售后驳回原因区域样式 */
+
+/* 开始寄回地址区域 */
+
+.back-address-wrap{
+  padding: 34rpx 40rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* 结束寄回地址区域 */
+
+/* 开始订单信息区域样式 */
+
+.order-info-wrap{
+  padding: 30rpx 40rpx 18rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.key{
+  width: 154rpx;
+}
+
+.copy{
+  display: inline-block;
+  width: 64rpx;
+  height: 32rpx;
+  text-align: center;
+  line-height: 32rpx;
+  background-color: rgba(216, 216, 216, 1);
+  border-radius: 16rpx;
+}
+
+/* 结束订单信息区域样式 */
+
+/* 开始按钮区域样式 */
+
+.btn-wrap{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100rpx;
+  padding: 0 40rpx;
+  box-shadow: 0 0 8rpx 0 rgba(0,0,0,0.05);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.btn{
+  height: 60rpx !important;
+  margin-left: 20rpx;
+  font-family: "PingFangSC-Medium", "sy-m";
+  font-size: 26rpx !important;
+}
+
+/* 结束按钮区域样式 */
+
+/* 开始弹窗区域样式 */
+
+.popup-wrap{
+  padding: 40rpx 30rpx 30rpx;
+  box-sizing: border-box;
+}
+/* 开始弹窗的地址选择区域 */
+.address-area-wrap{
+  overflow: hidden;
+  padding-top: 32rpx;
+  box-shadow: 0 0 12rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.arrow{
+  transform: rotate(-90deg);
+}
+
+.color-block{
+  flex-shrink: 0;
+  width: 25rpx;
+  height: 12rpx;
+  background-color: rgba(223, 123, 123, 1);
+  transform: skew(45deg);
+}
+
+.even{
+  background-color: rgba(0, 90, 137, 1);
+}
+/* 结束弹窗的地址选择区域 */
+
+/* 开始弹窗的时间选择区域 */
+.time-area-wrap{
+  padding: 32rpx 60rpx 40rpx 30rpx;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 0 12rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.date{
+  width: 100rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: rgba(102, 102, 102, 1);
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.time{
+  width: 200rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  color: rgba(153, 153, 153, 1);
+  background-color: rgba(245, 245, 245, 1);
+  border-radius: 24rpx;
+  box-sizing: border-box;
+}
+/* 结束弹窗的时间选择区域 */
+
+.popup-btn-wrap{
+  justify-content: flex-end;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+
+.popup-btn{
+  width: 170rpx;
+}
+
+/* 结束弹窗区域样式 */

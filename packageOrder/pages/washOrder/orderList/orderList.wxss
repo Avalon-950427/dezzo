@@ -1,0 +1,68 @@
+/* packageOrder/pages/washOrder/orderList/orderList.wxss */
+.container{
+  background-color: #f8f8f8;
+}
+
+/* 开始tab栏区域 */
+.tabs-wrap{
+  width: 100vw;
+  height: 94rpx;
+  background-color: white;
+}
+
+.tab{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle
+}
+
+.active-tab{
+  position: relative;
+}
+
+.active-tab::after{
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  content: '';
+  width: 30rpx;
+  height: 6rpx;
+  margin: auto;
+  background-color: rgba(190, 47, 47, 1);
+  border-radius: 3rpx;
+}
+/* 结束tab栏区域 */
+
+/* 开始订单列表区域样式 */
+
+.order-wrap{
+  width: 710rpx;
+  margin: 0 auto 20rpx;
+  padding: 24rpx 30rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.img-list{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.right-arrow{
+  transform: rotate(-90deg);
+}
+
+.btn-style{
+  height: 60rpx !important;
+  font-family: "PingFangSC-Medium","sy-m";
+  font-weight: medium;
+  font-size: 24rpx;
+}
+
+/* 结束订单列表区域样式 */
+
+.no-more-order{
+  text-align: center;
+  color: rgba(102, 102, 102, 1);
+}

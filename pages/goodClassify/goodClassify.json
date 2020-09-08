@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index",
+    "searchInput": "/components/searchInput/searchInput"
+  },
+  "navigationBarTitleText": "分类"
+}

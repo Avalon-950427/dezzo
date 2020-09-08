@@ -1,0 +1,18 @@
+<!--packageWash/pages/chooseWashClassify/chooseWashClassify.wxml-->
+<view class="container">
+  <scroll-view scroll-y style="height: 100vh">
+    <van-image width="100vw" height="360rpx"></van-image>
+    <view class="title PFSC-m fz-36 mt-50 mb-50">选择洗护物件类型<text class="iconfont icon-xiala1 ml-12"></text></view>
+    <view class="wash-classify-wrap" wx:for="{{washClassify}}" wx:key="id">
+      <view class="PFSC-m fz-32">{{item.name}}</view>
+      <view class="wash-classify">
+        <view class="classify-item mt-50" wx:for="{{item.classify}}" wx:key="id" bindtap="chooseClassify">
+          <van-image width="140rpx" height="140rpx"></van-image>
+          <view class="service-name PFSC-l fz-26 mt-24">{{item.service}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="block" style="height: {{isIphoneX?'68rpx':'0rpx'}}"></view>
+  </scroll-view>
+</view>
+<view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>

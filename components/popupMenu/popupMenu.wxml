@@ -1,0 +1,6 @@
+<!--components/popupMenu/popupMenu.wxml-->
+<view class="mask" bindtap="hideMask" hidden="{{!show}}">
+  <view id="popup" class="popup-wrap {{show?'show':''}}" catchtap="catch">
+    <slot></slot>
+  </view>
+</view>

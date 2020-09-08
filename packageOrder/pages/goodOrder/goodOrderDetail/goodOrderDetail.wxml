@@ -1,0 +1,97 @@
+<!--packageOrder/pages/goodOrder/goodOrderDetail/goodOrderDetail.wxml-->
+<scroll-view scroll-y style="height: 100vh">
+  <view class="container">
+    <!-- 开始头部状态栏区域 -->
+    <view class="status-wrap mb-10 flex flex-column" style="background-color:rgba(153, 153, 153, 1)">
+      <view class="PFSC-m fz-36 mb-8">支付已超时</view>
+      <view class="PFSC-l fz-22">支付已超时，订单已自动取消</view>
+    </view>
+    <!-- 结束头部状态栏区域 -->
+    <!-- 开始用户信息和订单物流状态区域 -->
+    <view class="address-delivery-wrap mb-10">
+      <view class="delivery-wrap flex flex-align-center">
+        <text class="iconfont icon-baoguo_lanshou fz-48 flex-s0" style="margin-top: -44rpx"></text>
+        <view class="flex-g1 ml-24">
+          <view class="PFSC-m fz-26 mb-18">平台已发货</view>
+          <view class="PFSC-l fz-22" style="color: rgba(153, 153, 153, 1)">2020-07-09  13:34:09</view>
+        </view>
+        <text class="iconfont icon-xiala arrow flex-s0 fz-24"></text>
+      </view>
+      <view class="address-wrap flex flex-align-center">
+        <text class="iconfont icon-ditu_dingwei fz-48 flex-s0" style="margin-top: -46rpx"></text>
+        <view class="flex-g1 ml-24">
+          <view class="mb-18"><text class="PFSC-m fz-26">王一帆</text><text class="number-font-700 fz-26 ml-18">136****3118</text></view>
+          <view class="PFSC-l fz-22" style="color: rgba(153, 153, 153, 1)">江苏省南京市建邺区江心洲街道保利紫荆公馆6栋104室</view>
+        </view>
+      </view>
+    </view>
+    <!-- 开始用户信息和订单物流状态区域 -->
+    <!-- 开始商品列表区域 -->
+    <view class="goods-wrap mb-10">
+      <view class="good-wrap flex mb-18" wx:for="{{2}}" wx:key="id">
+        <van-image width="160rpx" height="160rpx" custom-class="flex-s0 mr-40"></van-image>
+        <view class="good-info flex-between flex-column flex-g1 ml-40">
+          <view class="PFSC-m fz-32" style="color:rgba(51, 51, 51, 1)">CHENAL</view>
+          <view class="PFSC-l fz-24" style="color: rgba(51, 51, 51, 1)">香奈儿米白色经典帆布手提包</view>
+          <view class="mb-8 number-font-500">¥ 5588</view>
+        </view>
+      </view>
+    </view>
+    <!-- 结束商品列表区域 -->
+    <!-- 开始订单备注区域 -->
+    <view class="remark-wrap flex-between flex-align-center mb-10">
+      <view class="PFSC-m fz-24">订单备注</view>
+      <view class="PFSC-l fz-24">请下周三发货</view>
+    </view>
+    <!-- 结束订单备注区域 -->
+    <!-- 开始优惠抵扣区域 -->
+    <view class="discount-wrap mb-10">
+      <view class="flex-between mb-8">
+        <view class="PFSC-l fz-24" style="color:rgba(51, 51, 51, 1)">积分抵扣</view>
+        <view class="number-font-500 fz-20">-¥230</view>
+      </view>
+      <view class="flex-between mb-8">
+        <view class="PFSC-l fz-24" style="color:rgba(51, 51, 51, 1)">优惠券</view>
+        <view class="number-font-500 fz-20">-¥200</view>
+      </view>
+      <view class="flex-between mb-18">
+        <view class="PFSC-l fz-24" style="color:rgba(51, 51, 51, 1)">运费</view>
+        <view class="number-font-500 fz-20">+¥0</view>
+      </view>
+      <view class="flex-between">
+        <view class="PFSC-m fz-26">实付金额</view>
+        <view class="number-font-700 fz-20">¥10746</view>
+      </view>
+    </view>
+    <!-- 结束优惠抵扣区域 -->
+    <!-- 开始订单信息区域 -->
+    <view class="order-info-wrap">
+      <view class="flex-between mb-18">
+        <view class="PFSC-l fz-24">订单编号</view>
+        <view class="number-font-700 fz-24">2020072233171</view>
+      </view>
+      <view class="flex-between mb-18">
+        <view class="PFSC-l fz-24">下单时间</view>
+        <view class="number-font-700 fz-24">2020-07-05  13:52:21</view>
+      </view>
+      <view class="flex-between mb-18">
+        <view class="PFSC-l fz-24">支付方式</view>
+        <view class="number-font-700 fz-24">微信支付</view>
+      </view>
+      <view class="flex-between">
+        <view class="PFSC-l fz-24">支付时间</view>
+        <view class="number-font-700 fz-24">2020-07-05  13:53:21</view>
+      </view>
+    </view>
+    <!-- 结束订单信息区域 -->
+    <view class="block" style="height:{{isIphoneX?'168rpx':''}}"></view>
+  </view>
+</scroll-view>
+<!-- 开始底部按钮区域 -->
+<view class="flex flex-align-center btn-wrap" style="bottom: {{isIphoneX?'68rpx':''}}">
+  <van-button custom-class="btn" plain color="rgba(153, 153, 153, 1)" round="true">取消订单</van-button>
+  <van-button custom-class="btn" plain color="rgba(190, 47, 47, 1)" round="true" open-type="contact">联系客服</van-button>
+  <van-button custom-class="btn" color="rgba(190, 47, 47, 1)" round="true">修改寄出信息</van-button>
+</view>
+<view class="iphoneX-block" wx:if="{{isIphoneX}}"></view>
+<!-- 结束底部按钮区域 -->
